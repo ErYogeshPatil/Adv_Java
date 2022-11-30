@@ -55,7 +55,7 @@
 <h1>User Registration Details.</h1>
 
 <sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"
-url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Yogesh@1996"></sql:setDataSource>
+url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Password"></sql:setDataSource>
 
 <sql:query dataSource="${db}" var="rs">
 select*from Registration;
@@ -86,7 +86,7 @@ select*from Registration;
 
 <h1>Ticket Booking Details.</h1>
 <sql:setDataSource var="db1" driver="com.mysql.jdbc.Driver"
-url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Yogesh@1996"></sql:setDataSource>
+url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Password"></sql:setDataSource>
 
 <sql:query dataSource="${db1}" var="Tk">
 select*from Ticket_Booking;
@@ -126,7 +126,7 @@ select*from Ticket_Booking;
 
 <h1>Payment Details.</h1>
 <sql:setDataSource var="db2" driver="com.mysql.jdbc.Driver"
-url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Yogesh@1996"></sql:setDataSource>
+url="jdbc:mysql://Localhost:3306/batch12to2" user="root" password="Password"></sql:setDataSource>
 
 <sql:query dataSource="${db2}" var="PY">
 select*from Payment;
