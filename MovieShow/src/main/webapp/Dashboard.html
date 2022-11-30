@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieShow</title>
+    <!-- bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+    <!-- text animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:wght@500&display=swap" rel="stylesheet">
+
+    <!-- flikety -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        .add {
+            width: 100%;
+            padding-top: 70px;
+        }
+
+        .add img {
+            width: 100%;
+            height: 170px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 50px rgb(19, 19, 19);
+            margin-bottom: 20px;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .add1 img {
+            width: 100%;
+            padding-top: 20px;
+            height: 400px;
+            /* position: fixed; */
+        }
+
+        .add2 img {
+            padding-top: 20px;
+            width: 100%;
+            height: 130px;
+        }
+
+        .section {
+            width: 100%;
+            height: 360px;
+        }
+
+        .section img {
+            padding-top: 20px;
+            height: 350px;
+            border-radius: 10%;
+        }
+
+        .add3 {
+            width: 100%;
+        }
+
+        .add3 img {
+            width: 100%;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+        .imgSlide {
+            padding-top: 20px;
+            height: 350px;
+            border-radius: 10%;
+        }
+
+
+
+
+        .carousel {
+            background: #EEE;
+        }
+
+        .carousel-cell {
+            width:100%;
+            height: 380px;
+            /* margin-right: 10px; */
+            /* background: rgb(253, 253, 253); */
+            border-radius:5px;
+            counter-increment: gallery-cell;
+        }
+
+        /* cell number */
+        .carousel-cell:before {
+            display: block;
+            text-align: center;
+            content: counter(gallery-cell);
+            line-height:10px;
+            /* font-size: 80px; */
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar bg-light"
+        style="background-color: #bbddf5;position:fixed; width:100%;z-index:1;border-bottom:2px solid black;box-shadow:10px 10px 15px burlywood;">
+        <div class="container-fluid">
+            <a href="home.html" class="navbar-brand">🅼🅾🆅🅸🅴🆂🅷🅾🆆</a>
+            <form class="d-flex" role="search" method="POST" action="SearchByName">
+                <input class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search"
+                    name="SearchByName" id="SearchName">
+                <button class="btn btn-outline-success" type="submit" name="send" value="Find"
+                    onclick="Get()">Search</button>
+                <a href="Order.html"><img src="./img/titket.jpg" alt="" height="35px" width="60px"></a>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Navbar close -->
+    <div class="add">
+        <img class="mySlides" src="./img/img6.JPG" />
+        <img class="mySlides" src="./img/img7.JPG" />
+        <img class="mySlides" src="./img/img8.JPG" />
+        <img class="mySlides" src="./img/img18.JPG" />
+        <img class="mySlides" src="./img/img17.JPG" />
+    </div>
+    <!-- <div class="section">
+        <img src="./img/img4.JPG" />
+        <img src="./img/img5.JPG" />
+        <img src="./img/img9.JPG" />
+        <img src="./img/img14.JPG" />
+        <img src="./img/img20.JPG" />
+        <img src="./img/img21.JPG" />
+    </div><br> -->
+
+    <!-- Flickity HTML init -->
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell">
+            <a href="Movie_uunchai.html"><img src="./img/img4.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img5.JPG" class="imgSlide"></a>
+            <a href="Movie_Ramsetu.html"><img src="./img/img9.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img14.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img20.JPG" class="imgSlide"></a>
+            <a href="Movie_DDLJ.html"><img src="./img/img21.JPG" class="imgSlide"></a>
+
+        </div>
+        <div class="carousel-cell">
+            <a href="MovieBook.html"><img src="./img/img19.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img16.JPG" class="imgSlide"></a>
+            <a href="Movie_MarathiBana.html"><img src="./img/img15.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img3.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img2.JPG" class="imgSlide"></a>
+            <a href="MovieBook.html"><img src="./img/img23.JPG" class="imgSlide"></a>
+        </div>
+        
+    </div>
+    
+
+    <div class="add3">
+        <img src="./img/img1.JPG" />
+    </div>
+
+    <hr>
+    <h3 style="background-color:rgb(191, 245, 242); border:1px solid black;">🌟 𝐔𝐩𝐜𝐨𝐦𝐢𝐧𝐠 𝐬𝐞𝐜𝐭𝐢𝐨𝐧🌈™ 🌟
+    </h3>
+    <hr>
+
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell">
+            <img src="./img/img10.JPG" />
+        </div>
+        <div class="carousel-cell">
+
+            <img src="./img/img24.JPG" />
+        </div>   
+    </div>
+
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell">
+            <img src="./img/img11.JPG" />
+        </div>
+        <div class="carousel-cell">
+            <img src="./img/img25.JPG" />
+        </div>   
+    </div>
+    
+    <div class="add2">
+        <img src="./img/img13.JPG" />
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>

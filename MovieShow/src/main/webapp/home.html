@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieShow</title>
+
+    <!-- bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+    <!-- text animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(./img/background.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            height: 500px; 
+        }
+
+        .heading {
+            text-align: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .footer{
+            text-align: center;
+            position: sticky;
+            margin-top:25%;
+        }
+        #link,img{
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+        }
+        #img{
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            height:70px;
+            width:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="./img/sound.wav" id="my_audio" autoplay="autoplay" loop="loop">sound</audio>
+    <div class="heading">
+        <h1 class="animate__animated animate__flip">🅼🅾🆅🅸🅴🆂🅷🅾🆆</h1>
+        <br><br>
+    </div>
+    <h4 id="link" class="animate__animated animate__backInDown animate__delay-2s"><a href="Register.html">𝓡𝓮𝓰𝓲𝓼𝓽𝓮𝓻 𝓝𝓮𝔀 𝓾𝓼𝓮𝓻</a><a href="Login.html" style="padding-left:50px;">𝓛𝓸𝓰𝓲𝓷 𝓤𝓼𝓮𝓻</a><a href="AdminLogin.html" style="padding-left:50px;">Admin Login</a></h4>
+ 
+<footer>@Yogesh Patil. [copy rights Reserved]</footer>
+<script>
+    window.onload = function() {
+    document.getElementById("my_audio").play();
+}
+</script>
+</body>
+
+</html>

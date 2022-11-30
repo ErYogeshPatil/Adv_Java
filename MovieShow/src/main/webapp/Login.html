@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+    <!-- text animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('./img/background 4.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            /* background-size: cover; */
+        }
+        .container {
+            border: 0.7px solid rgb(39, 38, 33);
+            display:block;
+            justify-content: center;
+            box-shadow: 0px 0px 35px rgb(243, 247, 40);
+            width: 300px;
+            height:auto;
+            position: fixed;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .img {
+            text-align: center;
+        }
+
+        .a {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .box1 {
+            background-color: rgb(73, 155, 73);
+            border-radius: 4px;
+            height: 40px;
+            width: 250px;
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
+
+
+        .box {
+            border-bottom: 2px solid rgb(81, 59, 59);
+            height: 35px;
+            color: rgb(36, 120, 162);
+            padding-top: 10px;
+        }
+
+        .glow-button {
+            width: 250px;
+            height: 40px;
+            border: 1px solid white;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .glow-button:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 10s linear infinite;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+            border-radius: 15px;
+        }
+
+        .glow-button:active {
+            color: rgb(0, 0, 0)
+        }
+
+        .glow-button:active:after {
+            background: transparent;
+        }
+
+        .glow-button:hover:before {
+            opacity: 1;
+        }
+
+        .glow-button:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(8, 124, 2);
+            left: 0;
+            top: 0;
+            border-radius: 20px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div style="padding-top:380px; padding-left:120px;">
+        <h1 class="animate__animated animate__zoomInUp animate__slower">🅼🅾🆅🅸🅴🆂🅷🅾🆆</h1>
+    </div>
+    <div>
+        <div class="container">
+            <form action="Login" method="POST">
+                <div class="img"><h4>🅼🅾🆅🅸🅴🆂🅷🅾🆆</h4></div>
+                <span style="font-family:'Inter', sans-serif; text-align:center; font-size:20px;">Login
+                    to your account</span><br>
+                <div>
+                    <input type="text" placeholder="Enter your credentials below "
+                        style=" border:none;text-align:center; margin-top:10px;width:230px; font-size:16px;">
+                </div>
+               <!--   <div class="a">
+                    <input type="text" name="Uname" placeholder="Enter User Name" style="border: none;
+                border-bottom: 2px solid rgb(193, 191, 191);
+                width:250px;">
+                </div> -->
+                <div class="a">
+                    <input type="text" name="Umail" placeholder="Enter Mail Id" style="border: none;
+                border-bottom: 2px solid rgb(193, 191, 191);
+                width:250px;">
+                </div>
+                <div class="a">
+                    <input type="password" name="Upass" placeholder="Enter Password" style=" border: none;
+                border-bottom: 2px solid rgb(193, 191, 191);
+                width: 250px;">
+                </div>
+                <div class="a">
+                    <input type="checkbox" value="5" checked>Remember Me
+                </div><br>
+                <button class="glow-button" type="submit" value="submit" name="submit">𝓢𝓲𝓰𝓷 𝓘𝓷</button><br>
+                <div class="box">Forget Password?</div>
+                <div class="box"><a href="Register.html"> Register Your Self First</a></div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
