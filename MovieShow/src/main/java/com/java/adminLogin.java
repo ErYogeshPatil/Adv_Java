@@ -38,7 +38,7 @@ public class adminLogin extends HttpServlet {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); // register driver 
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","Yogesh@1996"); 
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/batch12to2","root","password"); 
             PreparedStatement ps=con.prepareStatement("select Name , Password from Admin where Name=? and Password=?");
             ps.setString(1, Name);
             ps.setString(2, Pass);
